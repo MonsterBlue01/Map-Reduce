@@ -34,11 +34,11 @@ echo $?                                                             # The exit s
 
 ${array_name[*]} ${array_name[@]}                                   # These are two ways to directly access the array in the shell.
 
-DATE[0]="Monday"
-DATE[1]="Tuesday"
-DATE[2]="Wednesday"
-DATE[3]="Thursday"
-DATE[4]="Friday"
+DATE[0] = "Monday"
+DATE[1] = "Tuesday"
+DATE[2] = "Wednesday"
+DATE[3] = "Thursday"
+DATE[4] = "Friday"
 echo "First Index: ${DATE[0]}"                                      # Will return 'Monday'
 echo "Second Index: ${DATE[1]}"                                     # Will return 'Tuesday'
 echo "First Method: ${NAME[*]}"                                     # Will return 'First Method: Monday Tuesday Wednesday Thursday Friday'
@@ -60,7 +60,7 @@ else
     echo "None of the condition met"
 fi
 
-FRUIT="kiwi"
+FRUIT = "kiwi"
 
 case "$FRUIT" in
     "apple") echo "Apple pie is quite tasty." 
@@ -71,17 +71,17 @@ case "$FRUIT" in
     ;;
 esac
 
-a=0
+a = 0
 while [ "$a" -lt 10 ]                                               # this is loop1
 do
-    b="$a"
+    b = "$a"
     while [ "$b" -ge 0 ]                                            # this is loop2
     do
         echo -n "$b "
-        b=`expr $b - 1`                                             # An example of while loop
+        b = `expr $b - 1`                                             # An example of while loop
     done
     echo
-    a=`expr $a + 1`
+    a = `expr $a + 1`
 done
 
 https://www.tutorialspoint.com/unix/unix-loop-control.htm
