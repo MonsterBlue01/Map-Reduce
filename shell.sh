@@ -84,5 +84,68 @@ do
     a = `expr $a + 1`
 done
 
-https://www.tutorialspoint.com/unix/unix-loop-control.htm
+a = 10
+
+until [ $a -lt 10 ]
+do                                                                  # An example of infinite loop with until
+    echo $a
+    a=`expr $a + 1`
+done
+
+a = 0
+
+while [ $a -lt 10 ]
+do
+    echo $a
+    if [ $a -eq 5 ]
+    then                                                            # An example of finite loop with break
+        break
+    fi
+    a = `expr $a + 1`
+done
+
+NUMS = "1 2 3 4 5 6 7"
+
+for NUM in $NUMS
+do
+    Q = `expr $NUM % 2`
+    if [ $Q -eq 0 ]
+    then                                                            # An example of loop with continue
+        echo "Number is an even number!!"
+        continue
+    fi
+    echo "Found odd number"
+done
+
+a = 10
+echo -e "Value of a is $a \n"                                       # with -e: "Value of a is 10 {newline}"
+                                                                    # without -e: "Value of a is 10 \n"
+
+echo ${var:-"Variable is not set"}
+echo "1 - Value of var is ${var}"
+
+echo ${var:="Variable is not set"}
+echo "2 - Value of var is ${var}"
+
+unset var
+echo ${var:+"This is default value"}                                # Several ways to set variables
+echo "3 - Value of var is $var"
+
+var = "Prefix"
+echo ${var:+"This is default value"}
+echo "4 - Value of var is $var"
+
+echo ${var:?"Print this message"}
+echo "5 - Value of var is ${var}"
+
+echo Hello\; Word                                                   # The way to print some symbols legally
+echo "I have \$1200"                                                # The way to print '$' but not as a variable
+
+echo '<-$1500.**>; (update?) [y|n]'                                 # We can use single quote to avoid use '\' to express symbols
+                                                                    # When we use double quote, it's not considered as "Quote"
+
+DATE=`date`                                                         # Use this quote can execute commands
+echo "Current Date: $DATE"                                          # Result: Current Date: Thu Jul 2 05:28:45 MST 2009
+
+https://www.tutorialspoint.com/unix/unix-io-redirections.htm
 Learn from here.
