@@ -147,5 +147,33 @@ echo '<-$1500.**>; (update?) [y|n]'                                 # We can use
 DATE=`date`                                                         # Use this quote can execute commands
 echo "Current Date: $DATE"                                          # Result: Current Date: Thu Jul 2 05:28:45 MST 2009
 
-https://www.tutorialspoint.com/unix/unix-io-redirections.htm
+who > users
+cat users                                                           # Output: oko tty01 Sep 12 07:30
+                                                                            # ai tty15 Sep 12 13:32
+                                                                            # ruth tty21 Sep 12 10:10
+                                                                            # pat tty24 Sep 12 13:07
+                                                                            # steve tty25 Sep 12 13:03
+
+echo line 1 > users
+cat users                                                           # Output: line 1
+
+echo line 2 >> users
+cat users                                                           # Output: line 1
+                                                                            # line 2
+
+wc -l users                                                         # Output: 2 users (2 lines)
+
+wc -l < users                                                       # Output: 2 (2 lines)
+
+command > /dev/null                                                 # It's the way to discard the output
+
+command > /dev/null 2>&1                                            # Lead STDERR to STDOUT
+
+echo message 1>&2                                                   # Lead STDOUT to STDERR and print it
+
+n >& m                                                              # Merges output from stream n with stream m
+
+n <& m                                                              # Merges input from stream n with stream m
+
+https://www.tutorialspoint.com/unix/unix-shell-functions.htm
 Learn from here.
