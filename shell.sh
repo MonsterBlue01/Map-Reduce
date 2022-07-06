@@ -175,5 +175,35 @@ n >& m                                                              # Merges out
 
 n <& m                                                              # Merges input from stream n with stream m
 
-https://www.tutorialspoint.com/unix/unix-shell-functions.htm
+Hello () {
+    echo "Hello World $1 $2"
+    return 10
+}
+
+Hello Zara Ali                                                      # Output: Hello World Zara Ali
+ret = $?
+
+echo "Return value is $ret"                                         # Output: (Get the output of the last command) 10
+
+number_one () {
+   echo "This is the first function speaking..."
+   number_two
+}
+
+number_two () {
+   echo "This is now the second function speaking..."
+}
+
+number_one                                                          # This is an example of nested function
+
+test.sh                                                             # Put everything in a Shell file (Like the definition of functions)
+number_one
+                                                                    # This is the first function speaking...
+                                                                    # This is now the second function speaking...
+
+unset -f function_name                                              # Remove the definition of functions
+
+man command                                                         # The way to open the manuel page and get help
+
+https://www.tutorialspoint.com/unix/unix-regular-expressions.htm
 Learn from here.
