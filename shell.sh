@@ -186,12 +186,12 @@ ret = $?
 echo "Return value is $ret"                                         # Output: (Get the output of the last command) 10
 
 number_one () {
-   echo "This is the first function speaking..."
-   number_two
+    echo "This is the first function speaking..."
+    number_two
 }
 
 number_two () {
-   echo "This is now the second function speaking..."
+    echo "This is now the second function speaking..."
 }
 
 number_one                                                          # This is an example of nested function
@@ -205,5 +205,5 @@ unset -f function_name                                              # Remove the
 
 man command                                                         # The way to open the manuel page and get help
 
-https://www.tutorialspoint.com/unix/unix-regular-expressions.htm
+https://www.tutorialspoint.com/unix/unix-user-administration.htm
 Learn from here.
