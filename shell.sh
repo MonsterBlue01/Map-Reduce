@@ -205,5 +205,5 @@ unset -f function_name                                              # Remove the
 
 man command                                                         # The way to open the manuel page and get help
 
-https://www.tutorialspoint.com/unix/unix-user-administration.htm
+https://www.tutorialspoint.com/unix/unix-signals-traps.htm
 Learn from here.
