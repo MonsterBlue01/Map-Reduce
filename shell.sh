@@ -204,6 +204,3 @@ number_one
 unset -f function_name                                              # Remove the definition of functions
 
 man command                                                         # The way to open the manuel page and get help
-
-https://www.tutorialspoint.com/unix/unix-signals-traps.htm
-Learn from here.
